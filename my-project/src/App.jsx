@@ -1,16 +1,21 @@
-import React from 'react'
-import Navbar from './Components/navbar/navbar'
-import LoginSignUp from './Components/login/login'
-import Navbar1 from './Components/navbar/Navbar1'
-import FormComponent from './Components/login/login'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar1 from "./Components/navbar/Navbar1";
+import LoginSignUp from "./Components/login/login";
+import FaceDetection from "./Components/scndpage/scndpage";
+import "./App.css";
+
 function App() {
   return (
-    <div>
-     <Navbar1 />
-     <FormComponent />
-    </div>
-  )
+    <Router>
+      <Navbar1 /> {/* Navbar remains consistent across pages */}
+      <Routes>
+        <Route path="/" element={<LoginSignUp />} /> {/* Default to Login/SignUp */}
+        <Route path="login-signup" element={<LoginSignUp />} />
+        <Route path="face-detect" element={<FaceDetection />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

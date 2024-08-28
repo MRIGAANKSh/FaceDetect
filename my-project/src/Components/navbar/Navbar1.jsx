@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import './navbar1.css'
-
+import { useNavigate } from 'react-router-dom';
 function Navbar1() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+  const navigate = useNavigate();
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -21,7 +22,10 @@ function Navbar1() {
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="FaceDetect\my-project\src\Components\login\login.jsx" className="nav__link"  onClick={(e) => {
+        e.preventDefault();
+        navigate('/login-signup');
+      }}>
             Home
           </a>
         </li>
@@ -31,7 +35,10 @@ function Navbar1() {
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="FaceDetect\my-project\src\Components\scndpage\scndpage.jsx" className="nav__link"  onClick={(e) => {
+        e.preventDefault();
+        navigate('/face-detect');
+      }}>
             Face-Test
           </a>
         </li>

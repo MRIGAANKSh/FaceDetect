@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-
+import { useNavigate } from "react-router-dom";
+import Navbar1 from "../navbar/Navbar1";
 const move = keyframes`
   0%{
       opacity:0;
@@ -302,8 +303,10 @@ const Text = styled.div`
 function FormComponent() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const navigate=useNavigate()
   return (
     <>
+   
       {" "}
       <BackgroundBox clicked={click}>
         <ButtonAnimate clicked={click} onClick={handleClick}></ButtonAnimate>
@@ -318,7 +321,7 @@ function FormComponent() {
             placeholder="Password"
           />
           <Link href="#">Forgot Your Password?</Link>
-          <Button>Sign In</Button>
+          <Button onClick={()=>navigate('/face-detect')}>Sign In</Button>
         </Form>
 
         <Form className="signup">
@@ -340,7 +343,7 @@ function FormComponent() {
           <Link href="#" onClick={handleClick}>
             Already have an Account?
           </Link>
-          <Button>Sign Up</Button>
+          <Button onClick={()=>navigate('face-detect')}>Sign Up</Button>
         </Form>
 
         <Text className="text1" clicked={click}>
