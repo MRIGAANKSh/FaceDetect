@@ -343,7 +343,7 @@ function FormComponent() {
           <Link href="#" onClick={handleClick}>
             Already have an Account?
           </Link>
-          <Button onClick={()=>navigate('face-detect')}>Sign Up</Button>
+          <Button onClick={()=>navigate('/face-detect')}>Sign Up</Button>
         </Form>
 
         <Text className="text1" clicked={click}>
