@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar1 from "./Components/navbar/Navbar1";
 import LoginSignUp from "./Components/login/login";
-import FaceDetection from "./Components/scndpage/scndpage";
+import FaceDetection from "./Components/scndpage/scndpage.1";
 import "./App.css";
 
 function App() {
