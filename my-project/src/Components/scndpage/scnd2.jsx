@@ -71,7 +71,7 @@ function FaceDetection() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-#beeefb transition-all duration-300">
-  <div className={`relative bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center ${isVideoVisible ? 'w-[90%] h-[90%]' : 'w-180 h-120'}`}>
+  <div className={`relative bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center ${isVideoVisible ? 'w-[70%] h-[70%]' : 'w-180 h-120'}`}>
     {!isVideoVisible && (
       <>
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Face Detection Online</h1>
