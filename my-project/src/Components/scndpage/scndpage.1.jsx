@@ -4,6 +4,8 @@ function FaceDetection() {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isWide, setIsWide] = useState(false);
   const [faces, setFaces] = useState([]);
+  const [faceMessage, setFaceMessage] = useState(''); // State to store the face message
+  const [messageColor, setMessageColor] = useState(''); // State to store the message color
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -52,6 +54,15 @@ function FaceDetection() {
 
           const data = await response.json();
           setFaces(data.faces);
+
+          // Check if any face is real or fake
+          if (data.faces.some(face => face.is_real)) {
+            setFaceMessage("Face is real");
+            setMessageColor("text-green-500");
+          } else {
+            setFaceMessage("Face is fake");
+            setMessageColor("text-red-500");
+          }
         } catch (error) {
           console.error('Error:', error);
         }
@@ -103,10 +114,15 @@ function FaceDetection() {
             <ul>
               {faces.map((face, index) => (
                 <li key={index}>
-                  Face {index + 1}: x={face.x}, y={face.y}, width={face.w}, height={face.h}
+                  Face {index + 1}: x={face.x}, y={face.y}, width={face.w}, height={face.h}, Real: {face.is_real ? 'Yes' : 'No'}
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+        {faceMessage && (
+          <div className={`mt-4 font-bold text-lg ${messageColor}`}>
+            {faceMessage}
           </div>
         )}
       </div>
