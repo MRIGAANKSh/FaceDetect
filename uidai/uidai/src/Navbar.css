@@ -1,0 +1,44 @@
+.navbar {
+    background-color: #002c77; /* Dark blue */
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+    background-color: #002c77;
+    padding: 10px;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #003a99;
+    border-radius: 5px;
+  }
+  
+  .navbar li:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  

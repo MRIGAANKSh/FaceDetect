@@ -1,0 +1,44 @@
+/* Style the main ScanFacePage container */
+.ScanFacePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #95b3f3; /* Light gray background */
+  }
+  
+  /* Style the box that contains the face scanner */
+  .box-container {
+    background-color: rgb(244, 253, 255);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Style the headline inside the box */
+  .box-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Style the button */
+  .scan-button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .scan-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

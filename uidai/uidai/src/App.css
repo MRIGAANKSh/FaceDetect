@@ -1,0 +1,103 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+.Left-logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.Logo-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #f4f4f4; /* Optional background for the logo container */
+}
+
+.Navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.Navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.Navbar li {
+  margin-left: 20px;
+}
+
+.Navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.Navbar a:hover {
+  background-color: #555;
+}
+
+.Navbar-logo,
+.Left-logo {
+  width: 60px; /* Adjust the size as needed */
+}
+
+.App-header {
+  margin-top: 50px;
+}
+
+.Scan-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Scan-button:hover {
+  background-color: #45a049;
+}
+.ScanFacePage, .AadhaarDetailsPage {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Scan-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Scan-button:hover {
+  background-color: #0056b3;
+}
+
+.Details-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
