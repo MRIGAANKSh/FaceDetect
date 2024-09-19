@@ -53,8 +53,9 @@ const ScanFacePage = () => {
       const isRealFace = result > 0.5; // Adjust the threshold as needed
       setResult(isRealFace ? "Real Face" : "Fake Face");
 
-      // Navigate based on the liveness detection result
+      // Show an alert if the face is real and navigate to the Aadhaar details page
       if (isRealFace) {
+        alert("Face is real");
         navigate("/aadhaar-details");
       } else {
         alert("Face authentication failed. Please try again.");

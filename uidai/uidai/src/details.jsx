@@ -3,10 +3,10 @@ import React from 'react';
 function AadhaarDetailsPage() {
   // You can replace this with actual Aadhaar data fetching logic
   const aadhaarDetails = {
-    name: 'John Doe',
+    name: 'Ruchi',
     aadhaarNumber: '1234-5678-9012',
-    dob: '01/01/1990',
-    address: '123 Main St, New Delhi, India',
+    dob: '24/07/2005',
+    address: 'ghaziabad ,uttar pradesh ,india',
   };
 
   return (
